@@ -2,7 +2,7 @@
 Implementation of Polybius Square Cipher in C.
 
 # Files in Repository
-README.mg: What you're reading right now.
+README.md: What you're reading right now.
 
 commands.txt: I don't like remembering what commands I need for compiling a C program, so I've included it for now.
 
