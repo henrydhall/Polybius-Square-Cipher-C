@@ -1,0 +1,2 @@
+gcc -Wall -g polybiussquare.c -o polybiussquare
+./polybiussquare
