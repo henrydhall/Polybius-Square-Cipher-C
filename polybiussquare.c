@@ -1,15 +1,52 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int main(int argc, char *argv[])
+#define BAD_NUMBER_ARGS 1
+#define TRUE 1
+#define FALSE 0
+
+FILE * parseCommandLine(int argc, char **argv, int *encrypt)
 {
-    printf("%d\n",argc);
-    printf("%s\n",argv[1]); // I like to print the command line arguments so I know what's going on during dev.
+    if( argc > 2 )
+    {
+        printf("Usage: %s [-d|--decrypt]\n", argv[0]);
+        exit(BAD_NUMBER_ARGS);
+    }
 
-    printf("TODO: find out how to get all 100 printable characters.\n");
-    printf("TODO: build \"array\" of characters.\n");
-    printf("TODO: figure out structure of program.\n");
-    printf("TODO: implement encryption.\n");
-    printf("TODO: finalize structure.\n");
-    printf("TODO: implement decryption.\n");
+    if( argc == 2 && (strcmp(argv[1], "-d") == 0 || strcmp(argv[1], "--decrypt") == 0 ))
+    {
+        *encrypt = FALSE;
+    }
+    else
+    {
+        *encrypt = TRUE;
+    }
+    return stdin;
+}
+
+void encryptText(FILE *input)
+{
+    printf("TODO: encryptText\n");
+}
+
+void decryptText(FILE *input)
+{
+    printf("TODO: decryptText\n");
+}
+
+int main(int argc, char * argv[])
+{
+    int encrypt;
+    FILE *input = parseCommandLine(argc,argv,&encrypt);
+    if( encrypt == TRUE)
+    {
+        encryptText(input);
+    }
+    else
+    {
+        decryptText(input);
+    }
+
     return 0;
 }
