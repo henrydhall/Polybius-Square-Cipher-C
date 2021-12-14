@@ -29,7 +29,14 @@ void printEncrypted(unsigned char *data)
 {
     printf("TODO: print encrypted");
     int caster = data[0];
-    printf("  %d\n", caster);
+    if( caster >= 31 && caster <= 126)
+    {
+        printf("  %d\n", caster);
+    }
+    else
+    {
+        printf(" TODO: what to do with characters we don't like\n");
+    }
 }
 
 void encryptText(FILE *input)
