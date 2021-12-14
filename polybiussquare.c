@@ -6,7 +6,7 @@
 #define TRUE 1
 #define FALSE 0
 
-FILE * parseCommandLine(int argc, char **argv, int *encrypt)
+FILE *parseCommandLine(int argc, char **argv, int *encrypt)
 {
     if( argc > 2 )
     {
@@ -25,9 +25,22 @@ FILE * parseCommandLine(int argc, char **argv, int *encrypt)
     return stdin;
 }
 
+void printEncrypted(unsigned char *data)
+{
+    printf("TODO: print encrypted");
+    int caster = data[0];
+    printf("  %d\n", caster);
+}
+
 void encryptText(FILE *input)
 {
-    printf("TODO: encryptText\n");
+    unsigned char data[1];
+    int numRead = fread(data, 1, 1, input);
+    while( numRead != 0)
+    {
+        printEncrypted(data);
+        numRead = fread(data, 1, 1, input);
+    }
 }
 
 void decryptText(FILE *input)
