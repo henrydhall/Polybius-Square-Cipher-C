@@ -13,7 +13,7 @@ To encrypt a file use echo or cat and redirect to ./polybiussquare as below.
 I recommend outputting to another file using > as below.
     echo "my text" | ./polybiussquare > myoutput.txt
 
-You can just run the program using ./polybius square and type away and it will encrypt line by line, but that gets hard to store, so using cat and echo is best.
+You can just run the program using just ./polybiussquare and type away and it will encrypt line by line, but that gets hard to store, so using cat and echo is best.
 
 # Files in Repository
 README.md: What you're reading right now.
