@@ -25,17 +25,34 @@ FILE *parseCommandLine(int argc, char **argv, int *encrypt)
     return stdin;
 }
 
+void printCoordinates(int origin)
+{
+    int x = 0;
+    int y = 0;
+    int offset = origin - 32;
+    while( offset > 10 )
+    {
+        x += 10;
+        offset -= 10;
+    }
+    while(offset > 0)
+    {
+        y += 1;
+        offset -= 1;
+    }
+    printf("%d",x+y);
+}
+
 void printEncrypted(unsigned char *data)
 {
-    printf("TODO: print encrypted");
     int caster = data[0];
-    if( caster >= 31 && caster <= 126)
+    if( caster >= 32 && caster <= 126)
     {
-        printf("  %d\n", caster);
+        printCoordinates(caster);
     }
     else
     {
-        printf(" TODO: what to do with characters we don't like\n");
+        printf("%s",data);
     }
 }
 
