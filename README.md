@@ -4,13 +4,16 @@ Implementation of Polybius Square Cipher in C.
 # Usage
 ## Compiling
 Compile the program using gcc. I've named the compiled program named polybiussquare.
+
     gcc -g polybiussquare.c -o polybiussquare
 
 ## Encrypting
 To encrypt a file use echo or cat and redirect to ./polybiussquare as below.
+
     echo "my text" | ./polybiussquare
 
 I recommend outputting to another file using > as below.
+
     echo "my text" | ./polybiussquare > myoutput.txt
 
 You can just run the program using just ./polybiussquare and type away and it will encrypt line by line, but that gets hard to store, so using cat and echo is best.
