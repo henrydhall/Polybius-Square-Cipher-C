@@ -40,7 +40,19 @@ void printCoordinates(int origin)
         y += 1;
         offset -= 1;
     }
-    printf("%d",x+y);
+
+    if(x+y == 0)
+    {
+        printf("00");
+    }
+    else if(x+y < 10)
+    {
+        printf("0%d",x+y);
+    }
+    else
+    {
+        printf("%d",x+y);
+    }
 }
 
 void printEncrypted(unsigned char *data)
@@ -67,9 +79,52 @@ void encryptText(FILE *input)
     }
 }
 
+void printOriginal(int x,int y)
+{
+    char orig = (x * 10) + y + 16;
+    char final = orig;
+    printf("%c",final);
+}
+
+void printDecrypted(unsigned char* data)
+{
+    int xcaster = data[0];
+    int ycaster = data[1];
+    printOriginal(xcaster,ycaster);
+}
+
 void decryptText(FILE *input)
 {
-    printf("TODO: decryptText\n");
+    unsigned char data[1];
+    unsigned char convertible[2];
+    int numRead = fread(data, 1, 1, input);
+    while( numRead != 0)
+    {
+        convertible[0] = ' ';
+        convertible[1] = ' ';
+        int intValue = data[0];
+        if(intValue >= 48 && intValue <= 57)
+        {
+            convertible[0] = intValue;
+            numRead = fread(data,1,1,input);
+            intValue = data[0];
+            if(intValue >= 48 && intValue <= 57)
+            {
+                convertible[1] = intValue;
+                printDecrypted(convertible);
+            }
+            else
+            {
+                convertible[1] = intValue;
+                printf("%s",convertible);
+            }
+        }
+        else
+        {
+            printf("%s",data);
+        }
+        numRead = fread(data, 1, 1, input);
+    }
 }
 
 int main(int argc, char * argv[])
