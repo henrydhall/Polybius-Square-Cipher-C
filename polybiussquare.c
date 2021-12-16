@@ -116,12 +116,15 @@ void decryptText(FILE *input)
             else
             {
                 convertible[1] = intValue;
-                printf("%s",convertible);
+                printf("&%s",convertible);
             }
         }
         else
         {
-            printf("%s",data);
+            //data[0] = '^';
+            //data[1] = '$';
+            //data[2] = '#';
+            printf("%c",data[0]);
         }
         numRead = fread(data, 1, 1, input);
     }
