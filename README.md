@@ -12,15 +12,15 @@ This is the table it uses. As you can see it's just the ascii table, but missing
 x/y | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 
 --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |---
 0    | spc | ! | " | # | $ | % | & | ' | ( | ) 
-    1    | * | + | , | - | . | / | 0 | 1 | 2 | 3 
-    2    | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | =
-    3    | > | ? | @ | A | B | C | D | E | F | G
-    4    | H | I | J | K | L | M | N | O | P | Q
-    5    | R | S | T | U | V | W | X | Y | Z | [
-    6    | \ | ] | ^ | _ | ` | a | b | c | d | e
-    7    | f | g | h | i | j | k | l | m | n | o
-    8    | p | q | r | s | t | u | v | w | x | y
-    9    | z | { |\| | } | ~ |
+1    | * | + | , | - | . | / | 0 | 1 | 2 | 3 
+2    | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | =
+3    | > | ? | @ | A | B | C | D | E | F | G
+4    | H | I | J | K | L | M | N | O | P | Q
+5    | R | S | T | U | V | W | X | Y | Z | [
+6    | \ | ] | ^ | _ | ` | a | b | c | d | e
+7    | f | g | h | i | j | k | l | m | n | o
+8    | p | q | r | s | t | u | v | w | x | y
+9    | z | { |\| | } | ~ |
 
 # Usage
 ## Compiling
