@@ -7,6 +7,21 @@ I used the ascii table because it was convenient. My encryption and decryption a
 
 I would like to implement a 5x5x5, or maybe a 4x4x4 "Polybius Cube" at some point.
 
+This is the table it uses. As you can see it's just the ascii table, but missing a few. There were only 95 reasonably printable characters so the last few spaces are blank. Space maps to 00. 'a' maps to 65. 'z' maps to 90. '_' maps to 63 and so on.
+
+x/y | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |---
+    0    | spc | ! | " | # | $ | % | & | ' | ( | ) 
+    1    | * | + | , | - | . | / | 0 | 1 | 2 | 3 
+    2    | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | =
+    3    | > | ? | @ | A | B | C | D | E | F | G
+    4    | H | I | J | K | L | M | N | O | P | Q
+    5    | R | S | T | U | V | W | X | Y | Z | [
+    6    | \ | ] | ^ | _ | ` | a | b | c | d | e
+    7    | f | g | h | i | j | k | l | m | n | o
+    8    | p | q | r | s | t | u | v | w | x | y
+    9    | z | { |\| | } | ~ |
+
 # Usage
 ## Compiling
 Compile the program using gcc. I've named the compiled program polybiussquare.
@@ -45,7 +60,4 @@ polybiussquare.c: This is where the magic will happen. It will be the program th
 test.sh: bash file to test the program. Passes the test in my Ubuntu setup. I don't plan on testing in other setups, but if it doesn't let me know and I'd be happy to work out the problems.
 
 # TODO's
-
-Add visuals to show the Polybius Square I'm using.
-
 Implement a 5x5x5 square.
